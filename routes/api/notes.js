@@ -1,6 +1,21 @@
-const router = require("express").Router()
-router.post("/:occupation", (req,res)=>{
-    console.log(req.params)
-    res.json("Maybe I should add a note")
+const router = require("express").Router();
+const db = require("../../db/db.json");
+const fs = require("fs");
+const { v4: uuid } = require('uuid');
+// 
+router.post("/", (req,res)=>{
+    console.log(db)
+    console.log(req.body)
+    req.body.id = uuid()
+    db.push(req.body)
+    fs.writeFile("./db/db.json", JSON.stringify(db, null,2), err=> err?console.log(err):console.log("File written successfully"))
+    res.json(db)
 })
+
+router.get("/", (req,res)=>{
+    console.log("Getting all notes")
+    res.json(db)
+})
+
+
 module.exports = router

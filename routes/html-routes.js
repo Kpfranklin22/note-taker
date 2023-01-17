@@ -1,16 +1,21 @@
 const router = require('express').Router();
 
 router.get("/", (req, res) => {
+  console.log("Hello");
+  res.json("I am the / route");
+});
+router.get("/notes", (req, res) => {
     console.log("Hello");
-    res.json("Whatsup");
+    res.json("I am the notes route");
   });
-  router.post("/awesome", (req, res) => {
+  router.get("*", (req, res) => {
     console.log("Hello");
-    res.json("Whatsup");
+    res.json("I am the * route");
   });
-  router.delete("/cool", (req, res) => {
-    console.log("Hello");
-    res.json("Whatsup");
-  });
+  // router.delete("/", (req, res) => {
+  //   console.log("Hello");
+  //   res.json("I am the delete route");
+  // });
+
   
 module.exports = router
