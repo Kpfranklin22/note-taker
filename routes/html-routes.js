@@ -1,17 +1,14 @@
 const router = require('express').Router();
+const path = require("path");
+
 
 router.get("/", (req, res) => {
-  console.log("Hello");
-  res.json("I am the / route");
+res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 router.get("/notes", (req, res) => {
-    console.log("Hello");
-    res.json("I am the notes route");
+  res.sendFile(path.join(__dirname, '../public/notes.html'));
   });
-  router.get("*", (req, res) => {
-    console.log("Hello");
-    res.json("I am the * route");
-  });
+
   // router.delete("/", (req, res) => {
   //   console.log("Hello");
   //   res.json("I am the delete route");

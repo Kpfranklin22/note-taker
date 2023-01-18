@@ -1,8 +1,13 @@
 const router = require("express").Router();
 const db = require("../../db/db.json");
 const fs = require("fs");
+const path = require("path");
 const { v4: uuid } = require('uuid');
-// 
+
+router.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, '../db/db.json'));
+  });
+
 router.post("/", (req,res)=>{
     console.log(db)
     console.log(req.body)
