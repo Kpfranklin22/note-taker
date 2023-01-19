@@ -16,6 +16,10 @@
 
 Deployed website: https://note-taker-01132023.herokuapp.com/
 
+![note-taker-01132023 herokuapp com_](https://user-images.githubusercontent.com/115495027/213343632-2b40c5be-209a-4321-a90d-fbda958d47d0.png)
+![note-taker-01132023 herokuapp com_notes](https://user-images.githubusercontent.com/115495027/213343649-b57d1c33-b5af-4109-8e78-d117f85b11a7.png)
+
+
 ## Installation 
   The following dependencies must be installed to run the application: Node, Express, UUID
 
