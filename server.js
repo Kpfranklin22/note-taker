@@ -17,6 +17,7 @@ app.use(routes)
 
 app.use(express.static("public"));
 
+// Logs which port gets used
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
